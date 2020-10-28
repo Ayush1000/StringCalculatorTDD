@@ -34,4 +34,11 @@ public class TestStringCalculator {
 		stringCalculator = new StringCalculator();
 		assertEquals(28,stringCalculator.Add("4,3,2,8,9,2"));
 	}
+	
+	@Test
+	public void testValuesWithNewline()
+	{
+		stringCalculator = new StringCalculator();
+		assertEquals(30,stringCalculator.Add("4\n3,2\n8,9,4"));
+	}
 }

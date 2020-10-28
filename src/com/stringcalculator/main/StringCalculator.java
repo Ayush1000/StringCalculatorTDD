@@ -4,7 +4,8 @@ public class StringCalculator {
 
 	public int Add(String numbers) {
 		// TODO Auto-generated method stub
-		String[] arrNum = numbers.split(",");
+		
+		String[] arrNum = numbers.split(",|\n");
 		int sum=0;
 		if(numbers.isEmpty()||numbers.equals(""))
 		{
