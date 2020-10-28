@@ -28,4 +28,10 @@ public class TestStringCalculator {
 		stringCalculator = new StringCalculator();
 		assertEquals(7,stringCalculator.Add("4,3"));
 	}
+	@Test
+	public void testUnlimitedValues()
+	{
+		stringCalculator = new StringCalculator();
+		assertEquals(28,stringCalculator.Add("4,3,2,8,9,2"));
+	}
 }

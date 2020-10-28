@@ -5,6 +5,7 @@ public class StringCalculator {
 	public int Add(String numbers) {
 		// TODO Auto-generated method stub
 		String[] arrNum = numbers.split(",");
+		int sum=0;
 		if(numbers.isEmpty()||numbers.equals(""))
 		{
 			return 0;
@@ -15,13 +16,15 @@ public class StringCalculator {
 		}
 		else 
 		{
-			int sum = getSumValue(arrNum[0],arrNum[1]);
+			for(String num:arrNum){
+			 sum = getSumValue(sum,num);
+			}
 			return sum;
 		}
 	}
-	private int getSumValue(String number1,String number2)
+	private int getSumValue(int number1,String number2)
 	{
-		return Integer.parseInt(number1)+Integer.parseInt(number2);
+		return number1+Integer.parseInt(number2);
 	}
 
 }
