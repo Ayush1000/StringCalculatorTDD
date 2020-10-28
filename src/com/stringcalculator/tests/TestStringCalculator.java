@@ -7,13 +7,19 @@ import com.stringcalculator.main.StringCalculator;
 import static org.junit.Assert.assertEquals;
 
 public class TestStringCalculator {
+	StringCalculator stringCalculator;
 	
 	@Test
-	public void emptyStringReturnsZero()
+	public void testemptyStringReturnsZero()
 	{
-		StringCalculator stringCalculator = new StringCalculator();
+		stringCalculator = new StringCalculator();
 		assertEquals(stringCalculator.Add(""),0);
 		
 	}
-
+	@Test
+	public void testSingleValue()
+	{
+		stringCalculator = new StringCalculator();
+		assertEquals("1",1);
+	}
 }
