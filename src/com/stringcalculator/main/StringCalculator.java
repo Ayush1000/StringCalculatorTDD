@@ -5,7 +5,7 @@ public class StringCalculator {
 	public int Add(String numbers) {
 		// TODO Auto-generated method stub
 		
-		String[] arrNum = numbers.split(",|\n");
+		String[] arrNum = splitWithDelimiter(numbers,",|\n");
 		int sum=0;
 		if(numbers.isEmpty()||numbers.equals(""))
 		{
@@ -27,5 +27,8 @@ public class StringCalculator {
 	{
 		return number1+Integer.parseInt(number2);
 	}
-
+	private String[] splitWithDelimiter(String numbers, String delimiter)
+	{
+		return numbers.split(delimiter);
+	}
 }
