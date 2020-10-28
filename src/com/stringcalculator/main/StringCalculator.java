@@ -22,11 +22,7 @@ public class StringCalculator {
 				numbers = numbers.substring(4);
 			}
 			String[] arrNum = splitWithDelimiter(numbers,delimiter);
-			int sum=0;
-			for(String num:arrNum){
-			 sum = getSumValue(sum,num);
-			}
-			return sum;
+			return calculateSum(arrNum);
 		}
 	}
 	private int getSumValue(int number1,String number2)
@@ -36,5 +32,13 @@ public class StringCalculator {
 	private String[] splitWithDelimiter(String numbers, String delimiter)
 	{
 		return numbers.split(delimiter);
+	}
+	private int calculateSum(String[] arr)
+	{
+		int sum=0;
+		for(String num:arr){
+		 sum = getSumValue(sum,num);
+		}
+		return sum;
 	}
 }
