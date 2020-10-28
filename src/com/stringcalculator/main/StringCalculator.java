@@ -1,12 +1,11 @@
 package com.stringcalculator.main;
 
+
 public class StringCalculator {
 
 	public int Add(String numbers) {
 		// TODO Auto-generated method stub
-		
-		String[] arrNum = splitWithDelimiter(numbers,",|\n");
-		int sum=0;
+		String delimiter = ",|\n";
 		if(numbers.isEmpty()||numbers.equals(""))
 		{
 			return 0;
@@ -17,6 +16,13 @@ public class StringCalculator {
 		}
 		else 
 		{
+			if(numbers.contains("//"))
+			{
+				delimiter = Character.toString(numbers.charAt(2));
+				numbers = numbers.substring(4);
+			}
+			String[] arrNum = splitWithDelimiter(numbers,delimiter);
+			int sum=0;
 			for(String num:arrNum){
 			 sum = getSumValue(sum,num);
 			}

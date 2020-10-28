@@ -41,4 +41,11 @@ public class TestStringCalculator {
 		stringCalculator = new StringCalculator();
 		assertEquals(30,stringCalculator.Add("4\n3,2\n8,9,4"));
 	}
+	@Test
+	public void testDifferentdelimiters()
+	{
+		stringCalculator = new StringCalculator();
+		assertEquals(8,stringCalculator.Add("//;\n4;3;1"));
+		
+	}
 }
