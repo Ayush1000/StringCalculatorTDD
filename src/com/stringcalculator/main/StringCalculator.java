@@ -6,6 +6,7 @@ public class StringCalculator {
 	public int Add(String numbers) {
 		// TODO Auto-generated method stub
 		String delimiter = ",|\n";
+		
 		if(numbers.isEmpty()||numbers.equals(""))
 		{
 			return 0;
@@ -36,8 +37,23 @@ public class StringCalculator {
 	private int calculateSum(String[] arr)
 	{
 		int sum=0;
+		String negativeNumbers= "";
 		for(String num:arr){
+			if(Integer.parseInt(num)<0)
+			{
+				if(negativeNumbers.equals(""))
+				{
+					negativeNumbers = num;
+				}
+				else
+					
+				negativeNumbers+=","+num;
+			}
 		 sum = getSumValue(sum,num);
+		}
+		if(negativeNumbers.length()>0)
+		{
+			throw new IllegalArgumentException("Illegal input: "+negativeNumbers);
 		}
 		return sum;
 	}

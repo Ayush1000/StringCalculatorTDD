@@ -48,4 +48,15 @@ public class TestStringCalculator {
 		assertEquals(8,stringCalculator.Add("//;\n4;3;1"));
 		
 	}
+	@Test
+	public void testNegativeNumbers()
+	{
+		stringCalculator = new StringCalculator();
+		try{
+			stringCalculator.Add("-3,4");
+		}catch(IllegalArgumentException e)
+		{
+			assertEquals(e.getMessage(),"Illegal input: -3");
+		}
+	}
 }
