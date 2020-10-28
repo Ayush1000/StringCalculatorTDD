@@ -15,9 +15,13 @@ public class StringCalculator {
 		}
 		else 
 		{
-			int sum = Integer.parseInt(arrNum[0])+Integer.parseInt(arrNum[1]);
+			int sum = getSumValue(arrNum[0],arrNum[1]);
 			return sum;
 		}
+	}
+	private int getSumValue(String number1,String number2)
+	{
+		return Integer.parseInt(number1)+Integer.parseInt(number2);
 	}
 
 }
