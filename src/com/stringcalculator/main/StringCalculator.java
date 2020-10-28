@@ -2,9 +2,15 @@ package com.stringcalculator.main;
 
 public class StringCalculator {
 
-	public int Add(String string) {
+	public int Add(String numbers) {
 		// TODO Auto-generated method stub
-		return 0;
+		if(numbers.isEmpty()||numbers.equals(""))
+		{return 0;
+	}
+		else
+		{
+			return Integer.parseInt(numbers);
+		}
 	}
 
 }

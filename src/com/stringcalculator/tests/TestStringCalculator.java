@@ -13,13 +13,19 @@ public class TestStringCalculator {
 	public void testemptyStringReturnsZero()
 	{
 		stringCalculator = new StringCalculator();
-		assertEquals(stringCalculator.Add(""),0);
+		assertEquals(0,stringCalculator.Add(""));
 		
 	}
 	@Test
 	public void testSingleValue()
 	{
 		stringCalculator = new StringCalculator();
-		assertEquals("1",1);
+		assertEquals(1,stringCalculator.Add("1"));
+	}
+	@Test
+	public void testTwoValues()
+	{
+		stringCalculator = new StringCalculator();
+		assertEquals(7,stringCalculator.Add("4,3"));
 	}
 }
